@@ -87,3 +87,29 @@ pub fn solve_part2(input: &Vec<(Dir, isize, usize)>) -> usize {
 
     count
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    const INPUT: &str = "L68
+    L30
+    R48
+    L5
+    R60
+    L55
+    L1
+    L99
+    R14
+    L82";
+
+    #[test]
+    fn part1_test() {
+        assert_eq!(solve_part1(&input_generator(INPUT)), 3);
+    }
+
+    #[test]
+    fn part2_test() {
+        assert_eq!(solve_part2(&input_generator(INPUT)), 6);
+    }
+}
