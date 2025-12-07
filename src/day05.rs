@@ -57,8 +57,6 @@ pub fn solve_part2(input: &Database) -> usize {
     let mut valid_ranges = input.valid_ranges.clone();
     valid_ranges.sort_by_key(|r| r.start);
 
-    println!("{:?}", valid_ranges);
-
     let mut last_end = 0;
     for range in valid_ranges {
         // because we sorted the ranges by start
