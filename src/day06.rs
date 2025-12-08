@@ -70,8 +70,6 @@ fn calc_block_p2(matrix: &Vec<Vec<char>>, op: char, start_col: usize, end_col: u
             }
         }
 
-        println!("{:?}", current_num);
-
         if current_num.is_empty() {
             continue;
         }
@@ -82,8 +80,6 @@ fn calc_block_p2(matrix: &Vec<Vec<char>>, op: char, start_col: usize, end_col: u
             .trim()
             .parse::<usize>()
             .unwrap();
-
-        println!("{:?}", num);
 
         total = match op {
             '+' => total + num,
